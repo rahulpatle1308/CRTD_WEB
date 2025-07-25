@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Eye, EyeOff, Calendar } from "lucide-react";
-import CareerGuidanceNavbar from "../CareerGuidanceSidenavbar";
+import CareerGuidanceNavbar from "../PersonalDetails/SideNavbar";
 import axios from "axios";
-
-import CareerGuidanceNavbar from "../../StudentSideNavBar";
 
 const AccountSettings = () => {
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);

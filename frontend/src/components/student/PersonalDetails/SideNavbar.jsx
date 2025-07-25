@@ -43,8 +43,8 @@ const SideNavbar = () => {
         </div>
         <div className="mt-3 text-sm font-normal bg-gray-200 py-1 px-1 rounded text-gray-500">
           <p>
-            Membership Status:{" "}
-            <span className="text-green-600 font-semibold">Active</span>
+            Member-Status:{" "}
+            <span className="text-red-600 font-semibold">Inactive</span>
           </p>
           <p>MS Id No: 8520947963</p>
           <p>Valid till: 02-06-2026</p>

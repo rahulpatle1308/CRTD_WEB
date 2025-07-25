@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { AlertCircle, Upload } from 'lucide-react';
-<<<<<<< HEAD:frontend/src/components/Education/EducationInfo.jsx
 import axios from 'axios';
-import CareerGuidanceNavbar from '../CareerGuidanceSidenavbar';
-=======
-import CareerGuidanceNavbar from '../../StudentSideNavBar';
->>>>>>> 067f90f7b0a13a1cc7a42cf9c70d89dc45d1328e:frontend/src/components/student/Education/EducationInfo.jsx
+import CareerGuidanceNavbar from '../PersonalDetails/SideNavbar';
 
 const EducationalInfo = () => {
     const [resume, setResume] = useState(null);
@@ -55,7 +51,6 @@ const EducationalInfo = () => {
             console.log(res.data);
             setSuccessMessage('Education Details Submitted Successfully!');
 
-            // Clear form
             setFormData({
                 highestEducation: '',
                 passingYear: '',
@@ -65,7 +60,6 @@ const EducationalInfo = () => {
             });
             setResume(null);
 
-            // Hide message after 2s
             setTimeout(() => {
                 setSuccessMessage('');
             }, 2000);
@@ -80,7 +74,6 @@ const EducationalInfo = () => {
             <CareerGuidanceNavbar />
 
             <div className="bg-white rounded-lg w-[150vh] mt-4 ml-15 border border-gray-200 p-6">
-                {/* Success Toast */}
                 {successMessage && (
                     <div className="fixed top-5 right-5 z-50 transition-opacity duration-500 ease-in-out bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg shadow-lg flex items-center space-x-2 animate-fade-out">
                         <svg className="w-5 h-5 text-green-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -89,9 +82,7 @@ const EducationalInfo = () => {
                         <span className="font-medium">{successMessage}</span>
                     </div>
                 )}
-                
 
-                {/* Alert */}
                 <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                     <div className="flex items-center space-x-2">
                         <AlertCircle className="w-5 h-5 text-orange-600" />
@@ -102,23 +93,20 @@ const EducationalInfo = () => {
                     </div>
                 </div>
 
-                {/* Heading */}
                 <div className="mb-6">
                     <h2 className="text-3xl mt-4 font-semibold text-black mb-2">Educational Information</h2>
                     <p className="text-gray-600">Please provide your academic background and skills</p>
                 </div>
 
-                {/* Form */}
                 <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {/* Qualification */}
                         <div className="space-y-2">
                             <label className="block text-black font-medium">Highest Qualification</label>
                             <select
                                 name="highestEducation"
                                 value={formData.highestEducation}
                                 onChange={handleChange}
-                                className="w-full border border-black text-black bg-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full border border-black bg-white text-black rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             >
                                 <option value="">Select Qualification</option>
                                 <option value="Bachelor's Degree">Bachelor's Degree</option>
@@ -128,7 +116,6 @@ const EducationalInfo = () => {
                             </select>
                         </div>
 
-                        {/* College */}
                         <div className="space-y-2">
                             <label className="block text-black font-medium">College/University Name</label>
                             <input
@@ -137,18 +124,17 @@ const EducationalInfo = () => {
                                 value={formData.collegeName}
                                 onChange={handleChange}
                                 placeholder="Enter college or university name"
-                                className="w-full border border-black text-black bg-white rounded px-3 py-2"
+                                className="w-full border border-black bg-white text-black rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             />
                         </div>
 
-                        {/* Year */}
                         <div className="space-y-2">
                             <label className="block text-black font-medium">Year of Passing</label>
                             <select
                                 name="passingYear"
                                 value={formData.passingYear}
                                 onChange={handleChange}
-                                className="w-full border border-black text-black bg-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full border border-black bg-white text-black rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             >
                                 <option value="">Select Year</option>
                                 <option value="2024">2024</option>
@@ -158,7 +144,6 @@ const EducationalInfo = () => {
                             </select>
                         </div>
 
-                        {/* Marks */}
                         <div className="space-y-2">
                             <label className="block text-black font-medium">Marks/CGPA</label>
                             <input
@@ -167,11 +152,10 @@ const EducationalInfo = () => {
                                 value={formData.marksOrCGPA}
                                 onChange={handleChange}
                                 placeholder="Enter Percentage or CGPA"
-                                className="w-full border border-black text-black bg-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full border border-black bg-white text-black rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             />
                         </div>
 
-                        {/* Skills */}
                         <div className="space-y-2 md:col-span-2">
                             <label className="block text-black font-medium">Skills</label>
                             <input
@@ -180,15 +164,14 @@ const EducationalInfo = () => {
                                 value={formData.skills}
                                 onChange={handleChange}
                                 placeholder="Enter skills (comma separated)"
-                                className="w-full border border-black text-black bg-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full border border-black bg-white text-black rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             />
                         </div>
 
-                        {/* Resume Upload */}
                         <div className="space-y-2 md:col-span-2">
                             <label className="block text-black font-medium">Upload Resume</label>
                             <div
-                                className="border-2 flex items-center gap-2 border-black text-black bg-white rounded-lg px-4 py-2 max-w-md w-[22vh] cursor-pointer"
+                                className="border-2 flex items-center gap-2 border-black text-black bg-white rounded-lg px-4 py-2 max-w-md w-[22vh] cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 onClick={() => setIsModalOpen(true)}
                             >
                                 <Upload className="w-5 h-5 text-black" />
@@ -197,7 +180,6 @@ const EducationalInfo = () => {
                         </div>
                     </div>
 
-                    {/* Submit Button */}
                     <div className="gap-4 mt-8">
                         <button
                             type="submit"
@@ -214,7 +196,6 @@ const EducationalInfo = () => {
                 </div>
             </div>
 
-            {/* Resume Modal */}
             {isModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-black/20 z-50">
                     <div className="bg-white rounded-lg p-6 w-[90%] max-w-md shadow-lg">
@@ -224,7 +205,7 @@ const EducationalInfo = () => {
                             type="file"
                             accept=".pdf,.doc,.docx"
                             onChange={handleResumeUpload}
-                            className="block w-full text-black border border-black rounded-md p-4 mb-4 bg-white"
+                            className="block w-full border border-black text-black bg-white rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         />
 
                         <p className="text-sm text-gray-500 mb-4 text-center">
