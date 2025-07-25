@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { AlertCircle, Upload } from 'lucide-react';
+<<<<<<< HEAD:frontend/src/components/Education/EducationInfo.jsx
 import axios from 'axios';
-import CareerGuidanceNavbar from '../PersonalDetails/SideNavbar';
+import CareerGuidanceNavbar from '../CareerGuidanceSidenavbar';
+=======
+import CareerGuidanceNavbar from '../../StudentSideNavBar';
+>>>>>>> 067f90f7b0a13a1cc7a42cf9c70d89dc45d1328e:frontend/src/components/student/Education/EducationInfo.jsx
 
 const EducationalInfo = () => {
     const [resume, setResume] = useState(null);
@@ -168,10 +172,11 @@ const EducationalInfo = () => {
                             />
                         </div>
 
+                        {/* Resume Upload */}
                         <div className="space-y-2 md:col-span-2">
                             <label className="block text-black font-medium">Upload Resume</label>
                             <div
-                                className="border-2 flex items-center gap-2 border-black text-black bg-white rounded-lg px-4 py-2 max-w-md w-[22vh] cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="border-2 flex items-center gap-2 border-black text-black bg-white rounded-lg px-4 py-2 max-w-md w-[22vh] cursor-pointer"
                                 onClick={() => setIsModalOpen(true)}
                             >
                                 <Upload className="w-5 h-5 text-black" />
