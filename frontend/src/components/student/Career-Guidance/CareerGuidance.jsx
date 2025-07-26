@@ -167,7 +167,7 @@ const CareerGuidance = () => {
 
 
         <div className="mt-8 text-center text-sm text-gray-500">
-          © 2025 CRTD Technologies. All rights reserved.
+     
         </div>
       </div>
     </div>

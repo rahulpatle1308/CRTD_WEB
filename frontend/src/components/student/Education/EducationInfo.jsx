@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AlertCircle, Upload } from 'lucide-react';
 import axios from 'axios';
-import CareerGuidanceNavbar from '../CareerGuidanceSidenavbar';
+// import CareerGuidanceNavbar from '../CareerGuidanceSidenavbar';
 
 const EducationalInfo = () => {
   const [resume, setResume] = useState(null);
@@ -192,7 +192,7 @@ const EducationalInfo = () => {
 
         <hr className="my-6" />
         <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500">© 2025 CRTD Technologies. All rights reserved.</p>
+          <p className="text-sm text-gray-500"> </p>
         </div>
       </div>
 

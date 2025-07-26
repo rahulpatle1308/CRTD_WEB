@@ -195,7 +195,7 @@ const AccountSettings = () => {
 
         {/* Footer */}
         <div className="text-center mt-8 text-sm text-gray-500">
-          © 2025 CRTD Technologies. All rights reserved.
+         
         </div>
 
         {/* Notifications */}
